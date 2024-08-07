@@ -7516,8 +7516,8 @@ a.anchor-link {
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h1 id="Report-on-Histopathologic-Cancer-Detection">Report on Histopathologic Cancer Detection<a class="anchor-link" href="#Report-on-Histopathologic-Cancer-Detection">¶</a></h1><p>by Christa Sparks
-<a href="https://github.com/sparkyyc/kaggle-hw5">https://github.com/sparkyyc/kaggle-hw5</a></p>
+<h1 id="Report-on-Histopathologic-Cancer-Detection">Report on Histopathologic Cancer Detection<a class="anchor-link" href="#Report-on-Histopathologic-Cancer-Detection">¶</a></h1><p>by Christa Sparks</p>
+<p><a href="https://github.com/sparkyyc/kaggle-hw5">https://github.com/sparkyyc/kaggle-hw5</a></p>
 <h2 id="Problem-Description-and-Data-Overview">Problem Description and Data Overview<a class="anchor-link" href="#Problem-Description-and-Data-Overview">¶</a></h2><h3 id="Problem-Description:">Problem Description:<a class="anchor-link" href="#Problem-Description:">¶</a></h3><p>The goal of the Kaggle competition "Histopathologic Cancer Detection" is to classify whether given histopathologic scans of lymph node sections contain metastatic tissue. This binary classification problem is crucial for accurate and early detection of cancer, aiding in better treatment outcomes.</p>
 <h3 id="Data-Overview:">Data Overview:<a class="anchor-link" href="#Data-Overview:">¶</a></h3><p>Training Data:</p>
 <ul>
@@ -7649,7 +7649,17 @@ a.anchor-link {
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
 <h3 id="Data-Cleaning:">Data Cleaning:<a class="anchor-link" href="#Data-Cleaning:">¶</a></h3><p>Verified all images are of dimensions 96x96.
 Checked for any missing or corrupted files, none were found.</p>
-<h2 id="Model-Architecture">Model Architecture<a class="anchor-link" href="#Model-Architecture">¶</a></h2><h3 id="First-Submission:">First Submission:<a class="anchor-link" href="#First-Submission:">¶</a></h3>
+<h2 id="Model-Architecture">Model Architecture<a class="anchor-link" href="#Model-Architecture">¶</a></h2><h3 id="Why-CNN:">Why CNN:<a class="anchor-link" href="#Why-CNN:">¶</a></h3><p>Suitability for Image Data:</p>
+<p>CNNs are inherently designed to work with image data. The convolutional layers effectively capture spatial hierarchies, which are crucial for identifying patterns in images.</p>
+<p>Balanced Complexity:</p>
+<p>The chosen architecture balances complexity and performance. With only two convolutional layers, it is simpler and less prone to overfitting compared to deeper networks. This is important given the potentially large size of the dataset and the need to generalize well to unseen data.</p>
+<p>Feature Extraction:</p>
+<p>The combination of convolutional and pooling layers efficiently extracts relevant features from the images, while the fully connected layers use these features to make accurate predictions.</p>
+<p>Overfitting Prevention:</p>
+<p>The use of dropout helps prevent overfitting by ensuring the network does not rely too heavily on any single feature and learns more general patterns.</p>
+<p>Binary Classification:</p>
+<p>The sigmoid activation in the output layer is ideal for binary classification tasks, providing a clear probability score for the presence of cancerous tissue.</p>
+<h3 id="First-Submission:">First Submission:<a class="anchor-link" href="#First-Submission:">¶</a></h3>
 </div>
 </div>
 </div>
